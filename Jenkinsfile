@@ -3,8 +3,8 @@ pipeline {
     label "jenkins-cpp"
   }
   environment {
-    ORG = 'REPLACE_ME_ORG'
-    APP_NAME = 'REPLACE_ME_APP_NAME'
+    ORG = 'krithiva'
+    APP_NAME = 'node-rx-demo'
     CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
   }
   stages {
@@ -58,7 +58,7 @@ pipeline {
       }
       steps {
         container('cpp') {
-          dir('./charts/REPLACE_ME_APP_NAME') {
+          dir('./charts/node-rx-demo') {
             sh "jx step changelog --version v\$(cat ../../VERSION)"
 
             // release the helm chart
