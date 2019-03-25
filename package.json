@@ -1,0 +1,19 @@
+{
+  "name": "node-http-demo1",
+  "version": "1.0.0",
+  "description": "Simple Hello World that listens on localhost:8080",
+  "main": "server.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "start": "node server.js",
+    "sonar": "node sonar-project.js"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "request": "^2.88.0"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
